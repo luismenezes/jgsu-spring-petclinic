@@ -1,7 +1,3 @@
-
-#!/usr/bin/env groovy
-// shebang tells most editors to treat as groovy (syntax highlights, formatting, etc)
-
 pipeline {
     agent any
     stages {
