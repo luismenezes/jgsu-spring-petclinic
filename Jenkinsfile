@@ -1,16 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage ('Checkout') {
-		    steps {
-			    git branch: 'main', url: 'https://github.com/luismenezes/jgsu-spring-petclinic.git'
-		    }
-	    }
-	    stage ('Build') {
-		    steps {
-			    sh './mvnw clean package'
-		    }
-	    }
+            stage ('Build') {
+                    steps {
+                            sh './mvnw clean package'
+                    }
+            }
     }
     post {
         always {
