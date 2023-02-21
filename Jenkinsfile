@@ -16,8 +16,5 @@ pipeline {
         success {
             archiveArtifacts 'target/*.jar'
         }
-        changed {
-            emailext attachLog: true, body: ''Please go to ${BUILD_URL} and verify the build'', compressLog: true, recipientProviders: [upstreamDevelopers(), requestor()], subject: ''Job \'$(JOB_NAME)\' (Build ${BUILD_NUMBER}) ${currentBuild.result}''
-        }
     }
 }
